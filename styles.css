@@ -1,0 +1,145 @@
+:root {
+  color-scheme: dark;
+  --bg: #05070f;
+  --panel: rgba(18, 24, 41, 0.8);
+  --stroke: rgba(139, 167, 255, 0.35);
+  --text: #ecf1ff;
+  --muted: #b6c3e5;
+  --accent: #61d5ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, #273057 0%, transparent 34%),
+    radial-gradient(circle at 80% 10%, #1e355e 0%, transparent 30%),
+    radial-gradient(circle at 40% 85%, #193340 0%, transparent 38%),
+    var(--bg);
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 3px 3px;
+  opacity: 0.2;
+}
+
+.landing {
+  width: min(1150px, 92vw);
+  margin: 0 auto;
+  padding: 4rem 0 5rem;
+}
+
+.hero h1 {
+  margin: 0.2rem 0 1rem;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 1.02;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
+.intro {
+  max-width: 76ch;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.card-grid {
+  margin-top: 2.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.app-card {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: 1rem;
+  padding: 1.1rem 1.1rem 1.3rem;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(8px);
+}
+
+.app-card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.app-card p {
+  color: var(--muted);
+  line-height: 1.5;
+  min-height: 7.2rem;
+}
+
+.app-card a {
+  display: inline-block;
+  margin-top: 0.6rem;
+  text-decoration: none;
+  color: #04131f;
+  background: linear-gradient(135deg, #76dbff, #7ec9ff, #95a7ff);
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+}
+
+.app-shell {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #05060a;
+  color: #d9e5ff;
+}
+
+.hud {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  width: min(360px, calc(100vw - 2rem));
+  background: rgba(8, 11, 20, 0.6);
+  border: 1px solid rgba(130, 160, 255, 0.35);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  padding: 0.8rem 0.95rem;
+}
+
+.hud h1 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.hud p {
+  margin: 0.45rem 0 0;
+  color: #b4c3e9;
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+.hud a {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #6ed7ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+canvas {
+  display: block;
+}
